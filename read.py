@@ -30,3 +30,10 @@ for d in data:
 		new.append(d)
 print('留言小於100字的留言共有：', len(new), '筆。')
 print(new[0])
+
+good = [] #這個good清單準備裝著所有有'good'的留言
+
+for d in data:
+	if d == 'good': # 另外一種寫法 if 'good' in d:
+		good.append(d)
+print('留言有提到東西好的(good)的比數有：', len(d), '筆。')
