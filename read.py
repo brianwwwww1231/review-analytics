@@ -40,4 +40,23 @@ for d in data:
 	# 但如果是問個是非題「good 有沒有含在這些d裡面」
 	# 這樣所有d中，有包含good的都會跑出來！
 		good.append(d)
-print('留言有提到東西好的(good)的比數有：', len(good), '筆。')
+print('留言有提到東西好的(good)的比數有：', len(good), '筆。') # 這邊我容易把len(good)寫成len(d)
+print(good[0])
+
+# list comprehension
+# 上面good 的例子如果看寫成一行表示，你會怎麼做？
+good = [d for d in data if 'good' in d]
+print(good)
+
+# 如果是bad in d呢？
+# 並且我也沒有要加任何篩選條件(if)
+bad = ['bad' in d for d in data]
+# 那上面這段擴寫是怎麼表達得？
+# bad = []
+# for d in date:
+#	bad.append('bad' in d)
+print(bad)
+
+# 所以由此可知這個list comprehension的架構如下
+# output = [ (nuber-1) for number in reference if number %2 == 0]
+#               運算         變數        清單         篩選條件
