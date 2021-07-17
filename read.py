@@ -20,3 +20,12 @@ for d in data:
 	# 再把他丟入sum_len這個公式去加總計算
 	print('目前留言累積字數：', sum_len)
 	print('目前每筆留言平均字數：', sum_len / len(data))
+
+# 建立篩選清單機制
+# 想要知道留言字數小於100字的留言有幾筆
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('留言小於100字的留言共有：', len(new), '筆。')
