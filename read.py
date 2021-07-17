@@ -29,3 +29,4 @@ for d in data:
 	if len(d) < 100:
 		new.append(d)
 print('留言小於100字的留言共有：', len(new), '筆。')
+print(new[0])
