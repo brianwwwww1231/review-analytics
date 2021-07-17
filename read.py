@@ -34,6 +34,10 @@ print(new[0])
 good = [] #這個good清單準備裝著所有有'good'的留言
 
 for d in data:
-	if d == 'good': # 另外一種寫法 if 'good' in d:
+	if 'good' in d:
+	# if d == 'good': -> 為什麼吧能這樣寫？
+	# 因為這樣做的話只有當d裡面的所有字串內容就完完全全是'good'才會被列出來
+	# 但如果是問個是非題「good 有沒有含在這些d裡面」
+	# 這樣所有d中，有包含good的都會跑出來！
 		good.append(d)
-print('留言有提到東西好的(good)的比數有：', len(d), '筆。')
+print('留言有提到東西好的(good)的比數有：', len(good), '筆。')
